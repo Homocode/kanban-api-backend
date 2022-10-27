@@ -10,6 +10,9 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.get('/', (_req, res) => {
+  res.send('Welcome to the Kanban Board API =D')
+})
 app.use('/api', router)
 app.use(errorHandler)
 app.use(notFoundHandler)
