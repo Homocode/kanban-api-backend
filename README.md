@@ -30,6 +30,8 @@ Mongo DB is access with mongoose. All db operations are handle with a **Generic 
 
 ### Error handling
 
+Errors ara handle with catch blocks and with the next function they are passed to a custom middleware that recive
+
 
 
 
