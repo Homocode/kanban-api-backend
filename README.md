@@ -14,7 +14,7 @@ Inside each layer the project is divided into three main components USERS, CARDS
 
 <br>
 
-**HTTP logic layer**: Is divided into two folders, Routes and Controllers. Handles the http requests from the client, route them to the respective controllers for validation, delegate to the correspondent service and send the response back. The HTTP/Express context ends in this layer.
+**HTTP logic layer**: Is divided into two folders, Routes and Controllers. Handles the http requests from the client, route them to the respective controllers for validation and delegate to the correspondent service and send the response back. The HTTP/Express context ends in this layer.
 
 **Business logic layer**: Is divided into two main folders, Services and Data base. Handles the task send by the controllers and manage the data acces for the data base.
 
@@ -23,6 +23,8 @@ Inside each layer the project is divided into three main components USERS, CARDS
   * Data base access layer: Controls how to access the data and the connection to the data base.
 
 <br>
+
+Erros handling: 
 
 
  
