@@ -7,11 +7,6 @@ export class Error400 extends BaseError {
   }
 }
 
-export class Error404 extends BaseError {
-  constructor (message: string) {
-    super('Not Found', HttpStatusCode.NOT_FOUND, message, true)
-  }
-}
 
 export class Error500 extends BaseError {
   constructor (message: string) {
