@@ -24,11 +24,11 @@ Inside each layer the project is divided into three main components USERS, CARDS
   
 <br>
 
-### Data base access
+#### Data base access
 
 Mongo DB is access with mongoose. All db operations are handle with a **Generic Repository**.
 
-### Error handling
+#### Error handling
 
 Errors ara handle with catch blocks and with the next function they are passed to a custom middleware that send the error info as a response to the client. 
 The different status code erros are generated with a base class (see error-handling folder in src folder).
