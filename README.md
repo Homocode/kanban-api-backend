@@ -21,10 +21,20 @@ Inside each layer the project is divided into three main components USERS, CARDS
   * Services Layer: Process the task from the controller and access the data base to save and/or retrive the process data.
   
   * Data base access layer: Controls how to access the data and the connection to the data base.
-
+  
 <br>
 
-Erros handling: 
+### Data base access
+
+Mongo DB is access with mongoose. All db operations are handle with a **Generic Repository**
+
+### Error handling
+
+
+
+
+
+
 
 
  
