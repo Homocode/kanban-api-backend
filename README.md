@@ -1,6 +1,6 @@
 # Kanban Board API
 
-REST API created with Typescript, Express and Mongo DB. Is running in a **Docker container** host in a [AWS EC2 instance](http://ec2-54-207-162-78.sa-east-1.compute.amazonaws.com:3001/).
+REST API created with Typescript, Express and Mongo DB. Is running in a **Docker container** host in a [AWS EC2 instance](http://ec2-54-207-162-78.sa-east-1.compute.amazonaws.com:3001/api/).
 
 It has three main URI`s " URL/api/ ": users, cards-containers, cards
 

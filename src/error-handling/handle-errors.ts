@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import express from 'express'
-import { Error404 } from '../api-errors/errors'
+import { Error404 } from './api-errors/errors'
 
 export const errorHandler = (error: any, _req: express.Request, res: express.Response, _next: express.NextFunction): express.Response => {
   console.log(error)

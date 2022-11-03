@@ -12,6 +12,5 @@ WORKDIR /user
 COPY package.json ./
 RUN npm install --omit=dev
 COPY --from=builder /user/build .
-RUN ls -a
 EXPOSE 3001
 CMD node /user/server.js

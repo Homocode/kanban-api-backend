@@ -2,19 +2,36 @@ import express from 'express'
 import cors from 'cors'
 import { router } from './routes/index.routes'
 import { dbConnect } from './data-base/index.data-base'
-import { errorHandler, notFoundHandler } from './error-handling/middleware/handle-errors'
+import expressWinston from "express-winston"
+import { errorHandler, notFoundHandler } from './error-handling/handle-errors'
+import { logger, requestLogger } from './error-handling/loggers'
 
 dbConnect()
 
 const app = express()
 
 app.use(cors())
+
 app.use(express.json())
-app.get('/', (_req, res) => {
-  res.send('Welcome to the Kanban Board API =D')
-})
+
+app.use(expressWinston.logger({
+  winstonInstance: requestLogger,
+  statusLevels: true
+}))
+
+if (process.env.NODE_ENV !== "production") {
+  expressWinston.requestWhitelist.push("body")
+  expressWinston.responseWhitelist.push("body")
+}
+
+app.use(expressWinston.errorLogger({
+  winstonInstance: logger
+}))
+
 app.use('/api', router)
+
 app.use(errorHandler)
+
 app.use(notFoundHandler)
 
 const ENV_PORT = process.env.PORT as any
