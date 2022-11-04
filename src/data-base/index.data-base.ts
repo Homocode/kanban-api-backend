@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import { logger } from '../error-handling/loggers'
 
 dotenv.config()
 
@@ -12,7 +13,7 @@ const connectionString = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@cluster0.k
 
 export const dbConnect = (): any => {
   connect(connectionString)
-    .then(() => console.log('DB connected!'))
+    .then(() => logger.info('DB connected!'))
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-    .catch((e: any) => console.log(`Error connecting to the data base: ${e.message}`))
+    .catch((e: any) => logger.info(`Error connecting to the data base: ${e.message}`))
 }

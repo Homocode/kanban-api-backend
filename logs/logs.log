@@ -1,0 +1,66 @@
+{
+  message: 'Server up and running listening on port 3001',
+  level: 'info',
+  timestamp: '2022-11-03T17:37:08.865Z'
+}
+{
+  message: 'DB connected!',
+  level: 'info',
+  timestamp: '2022-11-03T17:37:19.728Z'
+}
+{
+  name: 'Not Found',
+  httpCode: 404,
+  isOperational: true,
+  level: 'error',
+  timestamp: '2022-11-03T17:37:22.812Z'
+}
+{
+  name: 'Not Found',
+  httpCode: 404,
+  isOperational: true,
+  level: 'error',
+  timestamp: '2022-11-03T17:37:24.732Z'
+}
+{
+  name: 'Not Found',
+  httpCode: 404,
+  isOperational: true,
+  level: 'error',
+  timestamp: '2022-11-03T17:37:25.329Z'
+}
+{
+  name: 'Not Found',
+  httpCode: 404,
+  isOperational: true,
+  level: 'error',
+  timestamp: '2022-11-03T17:37:37.491Z'
+}
+{
+  name: 'Not Found',
+  httpCode: 404,
+  isOperational: true,
+  level: 'error',
+  timestamp: '2022-11-03T17:37:41.451Z'
+}
+{
+  name: 'Not Found',
+  httpCode: 404,
+  isOperational: true,
+  level: 'error',
+  timestamp: '2022-11-03T17:37:42.587Z'
+}
+{
+  name: 'Not Found',
+  httpCode: 404,
+  isOperational: true,
+  level: 'error',
+  timestamp: '2022-11-03T17:37:48.188Z'
+}
+{
+  name: 'Not Found',
+  httpCode: 404,
+  isOperational: true,
+  level: 'error',
+  timestamp: '2022-11-03T17:37:48.540Z'
+}

@@ -4,6 +4,10 @@ import { Error500 } from '../../../error-handling/api-errors/errors'
 import { ICrud } from '../interfaces'
 import { ObjectIdType } from '../../../types'
 
+const mongooseError = (error: any) => {
+  return `Mongoose ${error.name}`
+}
+
 export abstract class BaseRepository<T> implements ICrud<T> {
   constructor(public readonly model: Model<T>) {
     this.model = model
@@ -14,7 +18,7 @@ export abstract class BaseRepository<T> implements ICrud<T> {
       const result = await this.model.create(item)
       return result
     } catch (e: any) {
-      throw new Error500(`Mongoose ${e.name}`)
+      throw new Error500(mongooseError(e))
     }
   }
 
@@ -23,7 +27,7 @@ export abstract class BaseRepository<T> implements ICrud<T> {
       const result = await this.model.updateOne(filter, update)
       return result
     } catch (e: any) {
-      throw new Error500(`Mongoose ${e.name}`)
+      throw new Error500(mongooseError(e))
     }
   }
 
@@ -32,7 +36,7 @@ export abstract class BaseRepository<T> implements ICrud<T> {
       const result = await this.model.findByIdAndDelete(id)
       return result
     } catch (e: any) {
-      throw new Error500(`Mongoose ${e.name}`)
+      throw new Error500(mongooseError(e))
     }
   }
 
@@ -41,7 +45,7 @@ export abstract class BaseRepository<T> implements ICrud<T> {
       const result = await this.model.find(filters)
       return result
     } catch (e: any) {
-      throw new Error500(`Mongoose ${e.name}`)
+      throw new Error500(mongooseError(e))
     }
   }
 }

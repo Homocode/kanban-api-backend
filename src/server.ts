@@ -19,11 +19,6 @@ app.use(expressWinston.logger({
   statusLevels: true
 }))
 
-if (process.env.NODE_ENV !== "production") {
-  expressWinston.requestWhitelist.push("body")
-  expressWinston.responseWhitelist.push("body")
-}
-
 app.use(expressWinston.errorLogger({
   winstonInstance: logger
 }))
@@ -40,5 +35,5 @@ const ENV_PORT = process.env.PORT as any
 const port = ENV_PORT || 3001
 app.listen(port, () => {
   // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-  console.log(`Server up and running listening on port ${port}`)
+  logger.info(`Server up and running listening on port ${port}`)
 })
