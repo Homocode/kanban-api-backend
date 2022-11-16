@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { router } from "./1-routes/index.routes";
+import { router } from "./routes/index.routes";
 import { dbConnect } from "./data-base/index.data-base";
 import expressWinston from "express-winston";
 import { errorHandler, notFoundHandler } from "./error-handling/handle-errors";

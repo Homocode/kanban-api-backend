@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { userService } from "../3-services/index.services";
-import { cardscontainerService } from "../3-services/index.services";
+import { userService } from "../services/index.services";
+import { cardscontainerService } from "../services/index.services";
 import { IUser } from "../types";
 import validateUserData from "./validations.controllers";
 

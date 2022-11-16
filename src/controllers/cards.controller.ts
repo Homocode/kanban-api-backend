@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Request, Response, NextFunction } from "express";
-import { newCard, removeCard } from "../3-services/card.service";
-import { getCardscontainerById } from "../3-services/cards-container.service";
+import { newCard, removeCard } from "../services/card.service";
+import { getCardscontainerById } from "../services/cards-container.service";
 import { ObjectIdType } from "../types";
 
 const createCard = async (req: Request, res: Response, next: NextFunction) => {

@@ -3,11 +3,8 @@ import {
   getCardscontainersByUser,
   newCardscontainer,
   removeCardscontainer,
-} from "../3-services/cards-container.service";
-import {
-  userService,
-  cardscontainerService,
-} from "../3-services/index.services";
+} from "../services/cards-container.service";
+import { userService, cardscontainerService } from "../services/index.services";
 import { ObjectIdType, IUser } from "../types";
 import validateUserData from "./validations.controllers";
 

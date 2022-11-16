@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import express from "express";
-import { user, cardscontainer, card } from "../2-controllers/index.controllers";
+import { user, cardscontainer, card } from "../controllers/index.controllers";
 const router = express.Router();
 
 router.get("/", (_req, res) => {
