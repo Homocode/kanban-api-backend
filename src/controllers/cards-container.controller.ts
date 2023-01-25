@@ -15,10 +15,9 @@ const createCardscontainer = async (
 ): Promise<Response<any, Record<string, any>> | undefined> => {
   try {
     const validatedUserData = validateUserData(req.body) as IUser;
-    const userInfoFromDb = await userService.getUserId(validatedUserData);
-    const userId = userInfoFromDb.find(
-      (element) => element._id
-    ) as unknown as ObjectIdType;
+    const userId = (await userService.getUserId(
+      validatedUserData
+    )) as ObjectIdType;
     await newCardscontainer(userId);
     const allUserCardscontainers =
       await cardscontainerService.getCardscontainersByUser(validatedUserData);

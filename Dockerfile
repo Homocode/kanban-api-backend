@@ -1,4 +1,4 @@
-FROM node:16.16-alpine as builder
+FROM node:18.12-alpine as builder
 WORKDIR /user
 COPY package.json ./
 RUN npm install
@@ -7,7 +7,7 @@ RUN npm run build
 
 
 ## this is stage two , where the app actually runs
-FROM node:16.16.0-alpine
+FROM node:18.12-alpine-alpine
 WORKDIR /user
 COPY package.json ./
 RUN npm install --omit=dev
